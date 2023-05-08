@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title> Ta posh interiors  </title>
+      <style>
+        *{
+        
+            padding: 0px;
+            
+        }
+
+        .header{
+            height: 80px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: black;
+            border-bottom: 1px solid black;
+            z-index: 1; 
+            
+            
+                      
+        }
+        
+        .nav{
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2% 6%; 
+            width: 100%;
+            height: 100%;
+            border-collapse: collapse;
+            margin-left: auto;
+
+        }
+        .nav-links{
+    
+            display: flex;
+            justify-content: flex-end;
+            text-align: center;
+            align-items: right;
+            padding-left: 800px;
+        }
+
+        .nav-links ul{
+            list-style-type: none;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+        .nav-links ul li {
+            margin: 0 10px;
+            list-style: none; 
+            padding: 0.5em;            
+        }
+        .nav-links ul li a{
+            color: rgb(255, 123, 0);
+            text-decoration: none;
+            font-size: 1em;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid-white;
+            transition: all 0.3s ease;
+        }
+        .nav-links ul li a:hover{
+            color: black;
+            background-color: white;
+        }
+      
+      
+        .text-box{
+            
+            width: 98%;
+            color: black;
+            position: relative;
+            top: 100%;
+            left: 50%;
+            transform: translate(-50%);
+            text-align: center;            
+            margin-left: 5%;
+            
+        }
+        .text-box h1{
+            font-size: 22px;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            grid-template-columns: repeat(12, 1tr);
+            row-gap: 30px;
+            grid-column: span 20;
+            width: 40%;
+            justify-self: end;
+            padding: 20px; 
+            padding-top: 6em;
+            word-spacing: 0.1em;
+            
+        }
+        .text-box p{
+           margin: 10px 0 40px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 14px;
+            color: black;
+            grid-column: span 20;
+            width: 40%;
+            justify-self: end;
+            background-color: white; 
+        }
+        .hero-btn{
+            display: inline-block;
+            text-decoration: none;
+            color: black;
+            border: 1px solid black;
+            padding: 12px 34px;
+            font-size: 13px;
+            background: transparent;
+            position: relative;
+            cursor: pointer;
+        } 
+        .hero-btn:hover{
+            border: 1px solid orange;
+            background: orange; 
+            transition:1s;
+        }
+        .container{
+            display: flex;
+            gap: 5px;
+            width: 50%;
+            height: 20px;
+            margin-right: 100%;
+            align-items: center;
+            align-self: right;
+            padding: 200px;    
+        }
+        /*
+        @media(max-width: 700px){
+            .text box h1{
+                font-size: 20px;
+            }
+            .nav-links ul li{
+                display: block;
+            }
+            .nav-links {
+                position: absolute;
+                background: blue;
+                height:100vh;
+                width:200px;
+                top:0;
+                right:0;
+                text-align: left;
+                z-index:7;
+            }
+        }*/
+        .article{
+            
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 98%;
+            
+            color: black;
+            position: relative;
+            top: 50%;
+            left: 50%;
+            /*transform: translate(-50%, -50%);*/
+            text-align: right;
+            width: 40%;
+            
+            margin-left: 5%;
+        }
+        
+        .img{
+            height: 90%;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            display: block; 
+
+           /* display: flex;
+            gap: 5px;
+            width: 50%;
+            height: 20px;
+            margin-right: 100%;
+            align-items: center;
+            align-self: right;
+            padding: 200px; 
+            */
+        }
+        
+        .img1{
+            height: 20%;
+            width: 20%;
+            padding-left: 30px;
+            padding-right: 30px;
+            text-align: left;
+            display: inline-block;
+            position: absolute;           
+            
+        }
+        
+        .picture1{
+            width: 200x;
+            height: 200px;
+            background-color: rgba(20, 30, 40, 0.1);
+            text-align: right;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            margin: 10rem auto 0 auto;
+            
+        }
+        .picture2{
+            width: 200px;
+            height: 200px;
+            background-color: rgba(20,30,40,0.1);
+            margin-right: 15px;
+            margin-top: 20px;
+            
+
+        }
+        .picture1p{
+            text-align: right;
+            float: left;
+            display: inline;
+            margin-right: 15px;
+        }
+        .picture2p{
+            float: right;
+            text-align: right;
+            display: inline;
+            margin-right: 20px;
+            
+        }
+
+        .button{
+            box-shadow: inset 0px 1px 0px 0px #fce2c1;
+            background: linear-gradient(to bottom, #ffc477 5%, #fb9e25 100%);
+            background-color: #ffc477;
+            border-radius: 11px;
+            border: 2px solid #eeb44f;
+            display: inline-block;
+            cursor: pointer;
+            color: #ffffff;
+        }
+        .footer{
+            padding-top: 40px;
+            padding-bottom: 40px;
+            margin-top: 40px;
+            border-top: 1px solid #eee;
+            background-color: white;
+            text-align: center;
+        }
+        
+
+         </style>
+</head>
+<body>
+    <section class = "header">
+        <nav>
+            <a href="index.html"><img src="LOGO.jfif " width="50px"></a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="">HOME</a></li>
+                    <li><a href="">ABOUT US</a></li>
+                    <li><a href="">CONTACT US </a></li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+
+    <section>
+        <div class="text-box">
+            <h1> This is something. This is something. Something is this. This is something. Something is this. This is something</h1>
+            <p> lorem ipsum lorem ipsum lorem ipsum lorem ipsum loremmmmm ipsummm loremmm loremm impsusmmm ipsum lorem</p>
+        <!--    <a href="">Visit Us and Find Out. Hahaha!!!</a> -->
+        </div>
+
+        <div class="container">
+            <div>
+                <img src="lounge.jfif" alt="A lounge">
+            </div>
+            
+            <div>
+                <img  src="lounge01.jfif" alt="Here is another lounge">
+            </div>
+            
+            <div>
+                <img src="lounge02.jfif" alt="This is another lounge">
+            </div>   
+        </div>
+        
+    </section>
+    <section>
+        <h3 class="article"> lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem Lorem ipsum dolor, sit 
+            amet consectetur adipisicing elit. 
+        </h3>
+        <p class="article"> This is maddening maddening maddening</p>
+    </section>
+
+    <img class="img" id="right" src="Loun.jfif" alt="This is a lounge">
+
+    <h2> Meet our haters</h2>
+    
+    <div class="picture1">
+        <img src="black1.jfif"  alt="This is a fucking picture">
+        <p class="picture1p"> This is a fucking image of our number one hater</p>
+    </div>
+
+    <div class="picture1">
+        <img src="black2.jfif"  alt="This is a fucking picture">
+        <p class="picture1p"> This is another fucking image of our second hater</p>
+
+    </div>
+
+    <h3> We will love to make your space ugly afff</h3>
+    <button class="button" <a href="ifedayyo12@gmail.com"> </a> subscribe here </button>
+
+
+    
+    
+    
+    
+</body>
+<footer class="footer"> 
+    <div><a href = "clumsysmurfpersonalblog"> Fucking Hhell Organisation </a> <br>Copyright &copy; 2023 <br> All rights reserved. Used with permission. </div>
+</footer>
+</html>
